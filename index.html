@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Academic Website</title>
-  <meta name="description" content="Academic website of Your Name — research interests, projects, writing, and contact." />
+  <title>Congrui Liu — Harvard College ’27</title>
+  <meta name="description" content="Academic website of Congrui Liu — Harvard College ’27. Government concentrator studying comparative politics with a focus on populism." />
   <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <!-- Open Graph -->
-  <meta property="og:title" content="Your Name — Academic Website" />
-  <meta property="og:description" content="Research interests, projects, writing, and contact." />
+  <meta property="og:title" content="Congrui Liu — Harvard College ’27" />
+  <meta property="og:description" content="Government concentrator studying comparative politics and populism." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="og-image.png" />
-  <meta property="og:url" content="https://your-domain.example" />
+  <meta property="og:url" content="https://congrui-liu.github.io/congrui/" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
   <style>
     :root{
@@ -21,7 +21,7 @@
       --muted: #6b7280; /* slate-500 */
       --card: #f8fafc;  /* slate-50 */
       --border: #e5e7eb; /* gray-200 */
-      --accent: #0ea5e9; /* sky-500 */
+      --accent: #A51C30; /* Harvard Crimson */
       --accent-ink: #0b0b0c;
       --radius: 18px;
       --shadow: 0 1px 1px rgba(0,0,0,.05), 0 10px 25px rgba(0,0,0,.08);
@@ -33,7 +33,7 @@
         --muted: #9ca3af;
         --card: #111827; /* gray-900 */
         --border: #1f2937;
-        --accent: #38bdf8; /* sky-400 */
+        --accent: #A51C30; /* crimson */
         --accent-ink: #020617;
         --shadow: 0 1px 1px rgba(0,0,0,.2), 0 10px 25px rgba(0,0,0,.35);
       }
@@ -81,6 +81,17 @@
     .tag{font-size:.8rem; padding:6px 10px; border-radius:999px; background: color-mix(in oklab, var(--accent) 20%, var(--card)); border:1px solid color-mix(in oklab, var(--accent) 60%, var(--border));}
     @media (max-width: 840px){ .card{grid-column: span 12} }
 
+    /* Images */
+    .headshot{display:flex; justify-content:center; margin-bottom:14px}
+    .headshot img{width:100%; max-width:220px; aspect-ratio:1/1; border-radius:22px; object-fit:cover; border:1px solid var(--border); box-shadow:var(--shadow)}
+    .headshot figcaption{margin-top:8px; text-align:center; color:var(--muted); font-size:.85rem}
+    .figure{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:8px; box-shadow:var(--shadow)}
+    .figure img{width:100%; height:auto; border-radius:calc(var(--radius) - 6px)}
+    .figure figcaption{margin-top:8px; font-size:.9rem; color: color-mix(in oklab, var(--text) 86%, var(--muted))}
+    .gallery{display:grid; grid-template-columns: repeat(12, 1fr); gap: clamp(14px, 2.8vw, 22px)}
+    .gallery .figure{grid-column: span 6}
+    @media (max-width: 840px){ .gallery .figure{grid-column: span 12} }
+
     /* CV / CTA */
     .cta{display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:16px}
     .btn{display:inline-flex; gap:10px; align-items:center; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); text-decoration:none; color:inherit; box-shadow:var(--shadow)}
@@ -94,17 +105,7 @@
     /* Links */
     a{color: var(--text); text-decoration-color: color-mix(in oklab, var(--accent) 65%, var(--text)); text-underline-offset:3px}
     a:hover{text-decoration-thickness: 2px}
-    /* Images */
-  .headshot{display:flex; justify-content:center; margin-bottom:14px}
-  .headshot img{width:100%; max-width:220px; aspect-ratio:1/1; border-radius:22px; object-fit:cover; border:1px solid var(--border); box-shadow:var(--shadow)}
-  .headshot figcaption{margin-top:8px; text-align:center; color:var(--muted); font-size:.85rem}
-  .figure{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:8px; box-shadow:var(--shadow)}
-  .figure img{width:100%; height:auto; border-radius:calc(var(--radius) - 6px)}
-  .figure figcaption{margin-top:8px; font-size:.9rem; color: color-mix(in oklab, var(--text) 86%, var(--muted))}
-  .gallery{display:grid; grid-template-columns: repeat(12, 1fr); gap: clamp(14px, 2.8vw, 22px)}
-  .gallery .figure{grid-column: span 6}
-  @media (max-width: 840px){ .gallery .figure{grid-column: span 12} }
-</style>
+  </style>
   <script>
     // Respect system theme on first load, then allow toggle
     const userPref = localStorage.getItem('theme');
@@ -119,15 +120,12 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Your Name",
-    "url": "https://your-domain.example",
-    "jobTitle": "Undergraduate Researcher",
-    "affiliation": {"@type": "CollegeOrUniversity", "name": "Your University"},
+    "name": "Congrui Liu",
+    "url": "https://congrui-liu.github.io/congrui/",
+    "jobTitle": "Undergraduate, Government (Comparative Politics)",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "Harvard College"},
     "sameAs": [
-      "https://scholar.google.com/citations?user=XXXX",
-      "https://orcid.org/0000-0000-0000-0000",
-      "https://github.com/yourhandle",
-      "https://www.linkedin.com/in/yourhandle/"
+      "https://github.com/congrui-liu"
     ]
   }
   </script>
@@ -136,7 +134,7 @@
   <div class="nav wrap" role="navigation" aria-label="Main">
     <div class="brand">
       <div class="badge" aria-hidden="true">🎓</div>
-      <a href="#top"><strong>Your Name</strong></a>
+      <a href="#top"><strong>Congrui Liu</strong></a>
     </div>
     <div class="spacer"></div>
     <div class="links">
@@ -144,6 +142,7 @@
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
       <a href="#writing">Writing</a>
+      <a href="#photos">Photos</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </div>
@@ -154,12 +153,12 @@
     <section class="hero" aria-labelledby="hero-title">
       <div>
         <div class="kicker">Academic Website</div>
-        <h1 id="hero-title">Your Name</h1>
-        <p class="lead">Undergraduate researcher exploring <em>Topic A</em> at <strong>Your University</strong>. I’m currently focused on <em>Research Question X</em> and building tools for <em>Area Y</em>. This site collects my interests, projects, and notes.</p>
+        <h1 id="hero-title">Congrui Liu</h1>
+        <p class="lead">Harvard College ’27, concentrating in <strong>Government</strong>. I study <em>comparative politics</em> with a focus on <em>populism</em>—how it emerges, how it governs, and how it reshapes institutions.</p>
         <div class="pillrow" aria-label="Research areas">
-          <span class="pill">Method: Causal Inference</span>
-          <span class="pill">Domain: Political Communication</span>
-          <span class="pill">Tools: Python · R · JS</span>
+          <span class="pill">Focus: Comparative Politics</span>
+          <span class="pill">Theme: Populism</span>
+          <span class="pill">Tools: Python · R · LaTeX</span>
         </div>
         <div class="cta">
           <a class="btn" href="#projects">See projects →</a>
@@ -168,16 +167,16 @@
       </div>
       <aside>
         <figure class="headshot">
-          <img src="images/headshot.jpg" alt="Portrait of Your Name" width="440" height="440" loading="eager"/>
-          <figcaption>Your Name</figcaption>
+          <img src="images/folder/headshot.jpg" alt="Portrait of Congrui Liu" width="440" height="440" loading="eager"/>
+          <figcaption>Congrui Liu</figcaption>
         </figure>
         <div class="card" role="complementary" aria-label="Quick facts">
           <h3>Now</h3>
           <p>What I’m doing this month:</p>
           <ul>
-            <li>Drafting a working paper on <em>Topic Z</em></li>
-            <li>Collecting a dataset on <em>Thing W</em></li>
-            <li>TA for <em>Course 123</em></li>
+            <li>Mapping recent cases of populism across regions</li>
+            <li>Building a small dataset of leaders’ rhetoric (text‑as‑data)</li>
+            <li>Writing an explainer on methods for comparative politics</li>
           </ul>
           <div class="tagrow" aria-label="Links">
             <a class="tag" href="#writing">Reading notes</a>
@@ -190,20 +189,20 @@
 
     <section id="about" aria-labelledby="about-title">
       <div class="sec-title"><span class="dot" aria-hidden="true"></span><h2 id="about-title">About</h2></div>
-      <p>I’m an undergraduate at <strong>Your University</strong> supervised by <a href="#">Prof. Example</a>. My broader interests include <em>field1</em>, <em>field2</em>, and <em>field3</em>. I enjoy building small, neat tools and writing accessible explainers for methods in the social sciences.</p>
+      <p>I’m an undergraduate at <strong>Harvard College</strong> (’27) concentrating in <strong>Government</strong>. My interests are in <em>comparative politics</em> and especially <em>populism</em>. I like building neat, reproducible tools and writing accessible explainers for methods in the social sciences.</p>
     </section>
 
     <section id="research" aria-labelledby="research-title">
       <div class="sec-title"><span class="dot" aria-hidden="true"></span><h2 id="research-title">Research Focus</h2></div>
       <div class="grid">
         <article class="card" aria-labelledby="q1">
-          <h3 id="q1">Question 1</h3>
-          <p>How does A affect B? I’m piloting an approach using C. Expect a pre‑analysis plan and a dataset release.</p>
-          <div class="tagrow"><span class="tag">Design: Natural Experiment</span><span class="tag">Data: Panel</span><span class="tag">Code: <a href="#">GitHub</a></span></div>
+          <h3 id="q1">Comparative Populism</h3>
+          <p>When and why do populist movements gain power? Early work mixes small‑N case comparisons with text‑as‑data to spot common patterns.</p>
+          <div class="tagrow"><span class="tag">Design: Comparative</span><span class="tag">Data: Text‑as‑data</span><span class="tag">Code: <a href="#">GitHub</a></span></div>
         </article>
         <article class="card" aria-labelledby="q2">
-          <h3 id="q2">Question 2</h3>
-          <p>Mapping the X → Y mechanism with mixed methods—text analysis + interviews. Early notes are public.</p>
+          <h3 id="q2">Media & Rhetoric</h3>
+          <p>How do leaders frame “the people” vs “the elite”? I’m prototyping a transparent pipeline for measuring rhetoric across cases.</p>
           <div class="tagrow"><span class="tag">Methods: NLP</span><span class="tag">Status: In progress</span></div>
         </article>
       </div>
@@ -235,36 +234,15 @@
       </div>
     </section>
 
-    <section id="writing" aria-labelledby="writing-title">
-      <div class="sec-title"><span class="dot" aria-hidden="true"></span><h2 id="writing-title">Writing & Notes</h2></div>
-      <div class="grid">
-        <article class="card" aria-labelledby="w1">
-          <h3 id="w1">Explainer: Method ABC</h3>
-          <p>Short, friendly write‑up for peers. Includes a minimal reproducible example.</p>
-          <div class="tagrow"><span class="tag">Explainer</span><span class="tag">Reproducible</span></div>
-        </article>
-        <article class="card" aria-labelledby="w2">
-          <h3 id="w2">Reading Notes: Paper XYZ</h3>
-          <p>Claims ⇄ evidence map, strengths/limitations, and follow‑ups I’d try next.</p>
-          <div class="tagrow"><span class="tag">Notes</span><span class="tag">Lit review</span></div>
-        </article>
-        <article class="card" aria-labelledby="w3">
-          <h3 id="w3">Working Paper (placeholder)</h3>
-          <p>Abstract‑length teaser until it’s ready. Link a <em>pre‑analysis plan</em> or a <em>project page</em> instead of a PDF.</p>
-          <div class="tagrow"><span class="tag">WIP</span><span class="tag">No PDF yet</span></div>
-        </article>
-      </div>
-    </section>
-
     <section id="photos" aria-labelledby="photos-title">
       <div class="sec-title"><span class="dot" aria-hidden="true"></span><h2 id="photos-title">Photos</h2></div>
       <div class="gallery">
         <figure class="figure">
-          <img src="images/talk-01.jpg" alt="Giving a talk" loading="lazy" width="1200" height="800" />
+          <img src="images/folder/talk-01.jpg" alt="Congrui Liu giving a talk" loading="lazy" width="1600" height="900" />
           <figcaption>Talk or presentation (add a one‑liner)</figcaption>
         </figure>
         <figure class="figure">
-          <img src="images/fieldwork-01.jpg" alt="Fieldwork notes" loading="lazy" width="1200" height="800" />
+          <img src="images/folder/fieldwork-01.jpg" alt="Fieldwork notes and materials" loading="lazy" width="1600" height="900" />
           <figcaption>Fieldwork / research moments</figcaption>
         </figure>
       </div>
@@ -275,39 +253,25 @@
       <p>Keep the brevity: degrees, current role, selected awards. Full CV as a downloadable PDF.</p>
       <div class="cta">
         <a class="btn" href="cv.pdf" download>Download CV (PDF)</a>
-        <a class="btn" href="#">Google Scholar</a>
-        <a class="btn" href="#">ORCID</a>
       </div>
     </section>
 
     <section id="contact" aria-labelledby="contact-title">
       <div class="sec-title"><span class="dot" aria-hidden="true"></span><h2 id="contact-title">Contact</h2></div>
-      <p>Best via email. I’m also on these platforms:</p>
+      <p>Best via email. You can also find some of my work on GitHub.</p>
       <div class="social" role="list">
-        <a role="listitem" href="https://github.com/yourhandle" aria-label="GitHub">
+        <a role="listitem" href="https://github.com/congrui-liu" aria-label="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 0 0 8.21 11.44c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.76.08-.75.08-.75 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.24-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.31 1.24a11.52 11.52 0 0 1 3.02-.41c1.03 0 2.07.14 3.04.41 2.3-1.56 3.31-1.24 3.31-1.24.66 1.65.24 2.87.12 3.17.77.85 1.24 1.93 1.24 3.24 0 4.62-2.8 5.65-5.47 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
           <span>GitHub</span>
         </a>
-        <a role="listitem" href="https://www.linkedin.com/in/yourhandle/" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 5 3.9 6.1 2.5 6.1S0 5 0 3.5 1.1 1 2.5 1 4.98 2 4.98 3.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.5-1 1.8-2.2 3.7-2.2 4 0 4.8 2.6 4.8 6V24h-4v-5.6c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V24h-4V8z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a role="listitem" href="https://scholar.google.com/citations?user=XXXX" aria-label="Google Scholar">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 12l11 9 11-9L12 3Zm0 4.2 6.6 5.4L12 18l-6.6-5.4L12 7.2Z"/></svg>
-          <span>Scholar</span>
-        </a>
-        <a role="listitem" href="https://orcid.org/0000-0000-0000-0000" aria-label="ORCID">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24A12 12 0 0 0 12 0Zm-2.1 6.4h1.7v11.2H9.9V6.4ZM12 6.4h4.6c2.2 0 3.5 1.4 3.5 3.4 0 2-1.3 3.4-3.5 3.4H13.7v4.4H12V6.4Zm1.7 1.6v3.6h2.7c1.2 0 1.9-.7 1.9-1.8 0-1.1-.7-1.8-1.9-1.8h-2.7Z"/></svg>
-          <span>ORCID</span>
-        </a>
-        <a role="listitem" href="#" id="emailLink" aria-label="Email"><span>email [at] example [dot] edu</span></a>
+        <a role="listitem" href="#" id="emailLink" aria-label="Email"><span>congrui_liu [at] college [dot] harvard [dot] edu</span></a>
       </div>
     </section>
   </main>
 
   <footer class="wrap">
     <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap">
-      <small>© <span id="y"></span> Your Name. Built with semantic HTML & vanilla CSS. <a href="#top">Back to top ↑</a></small>
+      <small>© <span id="y"></span> Congrui Liu. Built with semantic HTML & vanilla CSS. <a href="#top">Back to top ↑</a></small>
       <small>Last updated <time id="lu" datetime="">just now</time></small>
     </div>
   </footer>
@@ -321,8 +285,8 @@
 
     // Email anti‑scrape (replace on click)
     const emailLink = document.getElementById('emailLink');
-    const name = 'hello';
-    const domain = 'example.edu';
+    const name = 'congrui_liu';
+    const domain = 'college.harvard.edu';
     emailLink.addEventListener('click', (e)=>{
       e.preventDefault();
       const addr = `${name}@${domain}`;
@@ -339,4 +303,3 @@
   </script>
 </body>
 </html>
-
